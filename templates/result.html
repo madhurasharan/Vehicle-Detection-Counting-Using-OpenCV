@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result | Vehicle Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎥 Detection Complete!</h1>
+        <video width="640" controls>
+            <source src="{{ url_for('static', filename='processed/' + processed_video) }}" type="video/mp4">
+        </video>
+        <h2>Total Vehicles Counted: <span class="count">{{ count }}</span></h2>
+        <a href="/">← Try Another Video</a>
+    </div>
+</body>
+</html>
